@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio | Joel Llalli</title>
+    <link rel="shortcut icon" href="assets/img/logo1.png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <script src="https://kit.fontawesome.com/6b07c2fbaa.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="assets/css/normalize.css">
+    <link rel="stylesheet" href="assets/css/example.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/toggle.css">
+    <script>
+        function detectColorScheme() {
+            var theme = "light";    //default to light
+
+            //local storage is used to override OS theme settings
+            if (localStorage.getItem("theme")) {
+                if (localStorage.getItem("theme") == "dark") {
+                    var theme = "dark";
+                }
+            } else if (!window.matchMedia) {
+                //matchMedia method not supported
+                return false;
+            } else if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+                //OS theme setting detected as dark
+                var theme = "dark";
+            }
+
+            //dark theme preferred, set document with a `data-theme` attribute
+            if (theme == "dark") {
+                document.documentElement.setAttribute("data-theme", "dark");
+            }
+        }
+        detectColorScheme();
+    </script>
+</head>
+
+<body>
+    <header class="header">
+        <img src="assets/img/logo1.png" alt="" class="header__logo" id="header__logo">
+        <nav class="header__nav">
+            <ul class="header__nav-list">
+                <li class="nav-list-item hidden"><a href="" class="nav-list-link">Sobre mi</a></li>
+                <li class="nav-list-item hidden"><a href="" class="nav-list-link">Skills</a></li>
+                <li class="nav-list-item hidden"><a href="" class="nav-list-link">Hobbies</a></li>
+                <li class="nav-list-item hidden"><a href="" class="nav-list-link">Formación</a></li>
+                <li class="nav-list-item hidden"><a href="" class="nav-list-link">Proyectos</a></li>
+                <li class="nav-list-item">
+                    <a href="mailto:joelllalligiraldo@gmail.com" class="nav-list-link active mail"><i
+                            class="fa-solid fa-envelope"></i><span>joelllalligiraldo@gmail.com</span>
+                    </a>
+                </li>
+                <li class="nav-list-item">
+                    <label class="label" id="theme-switch">
+                        <span class="toggle" id="toggle">
+                            <input class="toggle-input" type="checkbox" id="checkbox_theme"/>
+                            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="32" height="32"
+                                viewBox="0 0 32 32" id="moon" class="icon">
+                                <title>moon-fill</title>
+                                <path
+                                    d="M24.633 22.184c-8.188 0-14.82-6.637-14.82-14.82 0-2.695 0.773-5.188 2.031-7.363-6.824 1.968-11.844 8.187-11.844 15.644 0 9.031 7.32 16.355 16.352 16.355 7.457 0 13.68-5.023 15.648-11.844-2.18 1.254-4.672 2.028-7.367 2.028z">
+                                </path>
+                            </svg>
+
+                            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="32" height="32"
+                                viewBox="0 0 32 32" id="sun" class="icon">
+                                <title>sun-fill</title>
+                                <path
+                                    d="M16.001 8c-4.418 0-8 3.582-8 8s3.582 8 8 8c4.418 0 7.999-3.582 7.999-8s-3.581-8-7.999-8v0zM14 2c0-1.105 0.895-2 2-2s2 0.895 2 2c0 1.105-0.895 2-2 2s-2-0.895-2-2zM4 6c0-1.105 0.895-2 2-2s2 0.895 2 2c0 1.105-0.895 2-2 2s-2-0.895-2-2zM2 14c1.105 0 2 0.895 2 2 0 1.107-0.895 2-2 2s-2-0.893-2-2c0-1.105 0.895-2 2-2zM4 26c0-1.105 0.895-2 2-2s2 0.895 2 2c0 1.105-0.895 2-2 2s-2-0.895-2-2zM14 30c0-1.109 0.895-2 2-2 1.108 0 2 0.891 2 2 0 1.102-0.892 2-2 2-1.105 0-2-0.898-2-2zM24 26c0-1.105 0.895-2 2-2s2 0.895 2 2c0 1.105-0.895 2-2 2s-2-0.895-2-2zM30 18c-1.104 0-2-0.896-2-2 0-1.107 0.896-2 2-2s2 0.893 2 2c0 1.104-0.896 2-2 2zM24 6c0-1.105 0.895-2 2-2s2 0.895 2 2c0 1.105-0.895 2-2 2s-2-0.895-2-2z">
+                                </path>
+                            </svg>
+
+                            <span class="toggle__btn" id="toggle__btn"/>
+                        </span>
+                    </label>
+                </li>
+            </ul>
+        
+        </nav>
+    </header>
+    <main>
+        <section class="banner container">
+            <div class="banner__desc">
+                <h1 class="banner__titulo">Hola, mi nombre es <b>Joel Llallihuaman Giraldo</b> y soy Desarrollador de
+                    Sistemas Web.</h1>
+                <p class="banner__texto">Soy formado en la Universidad Nacional Santiago Antúnez de Mayolo (UNASAM) y
+                    actualmente estoy
+                    participando del proyecto Oracle ONE en Alura Latam.</p>
+                <br><br>
+                <p class="banner__texto">Mis redes Sociales:</p>
+                <ul class="banner__list">
+                    <li class="banner__list-item"><a href="https://github.com/Joe0919" target="_blank"
+                            class="banner__list-link"><i class="bi bi-github"></i>Github</a></li>
+                    <li class="banner__list-item"><a
+                            href="https://www.linkedin.com/in/joel-llallihuam%C3%A1n-giraldo-968230246/"
+                            class="banner__list-link" target="_blank"><i class="bi bi-linkedin"></i>Linkedin</a></li>
+                    <li class="banner__list-item"><a href="https://www.instagram.com/jo3l_llalli/"
+                            class="banner__list-link" target="_blank"><i class="bi bi-instagram"></i>Instagram</a></li>
+                    <li class="banner__list-item"><a href="#" class="banner__list-link" target="_blank"><i
+                                class="bi bi-file-earmark-person"></i>Currículo</a></li>
+                </ul>
+            </div>
+            <img src="assets/img/perfil.jpg" alt="" class="banner__foto">
+        </section>
+        <section class="sobre container bg-blue-sky">
+            <h1 class="sobre__titulo">Sobre mi</h1>
+            <p class="sobre_texto1">Soy Desarrollador Web y estudié la carrera de Ingeniería de Sistemas e Informática
+                en la <b>Universidad Nacional Santigo Antúnez de Mayolo (UNASAM)</b> de la provincia de Huaraz,
+                departamento de Áncash - Perú, en donde actualmente resido. Tengo 24 años, soy de nacionalidad peruana y
+                me encanta el mundo de la programación y el diseño.</p>
+            <p class="sobre_texto2">Poseo habilidades en la elaboración de proyectos web estáticos y dinámicos. Me
+                especializo mayormente en el desarrollo Front End aunque tambien tengo habilidades en la programación
+                Back End que he adquirido durante mis estudios universitarios y durante mis practicas profesionales, Me
+                gusta trabajar en equipo y cumplir los objetivos que me trazo. Espero poder trabajar en distintas
+                empresas y ampliar mis conocimientos en diseño y programación asi como mis habilidades en la Ingenieria
+                de Sistemas. </p>
+            <span class="sobre__firma">Joel Llallihuaman</span>
+        </section>
+        <section class="skills container bg-gray">
+            <h2 class="skills__title titulo2">Skills</h2>
+            <ul class="skills__list">
+                <li class="skills__list-item caja"><i class="fa-brands fa-html5"></i><span>Html 5</span></li>
+                <li class="skills__list-item caja"><i class="fa-brands fa-css3-alt"></i></i><span>CSS</span></li>
+                <li class="skills__list-item caja"><i class="fa-brands fa-square-js"></i><span>Javascript</span></li>
+                <li class="skills__list-item caja"><i class="fa-brands fa-php"></i><span>PHP</span></li>
+                <li class="skills__list-item caja"><i class="fa-brands fa-python"></i><span>Python</span></li>
+                <li class="skills__list-item caja"><i class="fa-brands fa-java"></i><span>Java</span></li>
+                <li class="skills__list-item caja"><i class="fa-brands fa-node"></i><span>Node JS</span></li>
+                <li class="skills__list-item caja"><i class="fa-brands fa-react"></i><span>React</span></li>
+                <li class="skills__list-item caja"><i class="fa-solid fa-database"></i><span>Mysql</span></li>
+                <li class="skills__list-item caja"><i class="fa-brands fa-laravel"></i><span>Laravel</span></li>
+            </ul>
+        </section>
+        <section class="hobbies container bg-gray">
+            <h2 class="hobbies__title titulo2">Hobbies</h2>
+            <ul class="hobbies__list">
+                <li class="hobbies__list-item caja"><i class="fa-solid fa-headphones"></i><span>Oir Música</span></li>
+                <li class="hobbies__list-item caja"><i class="fa-solid fa-guitar"></i><span>Tocar Guitarra</span></li>
+                <li class="hobbies__list-item caja"><i class="fa-solid fa-tv"></i><span>Ver Series</span></li>
+                <li class="hobbies__list-item caja"><i class="fa-solid fa-kitchen-set"></i><span>Cocinar</span></li>
+                <li class="hobbies__list-item caja"><i class="fa-solid fa-dumbbell"></i><span>Ejercitarse</span></li>
+                <li class="hobbies__list-item caja"><i class="fa-solid fa-person-walking"></i><span>Dar Paseos</span>
+                </li>
+                <li class="hobbies__list-item caja"><i class="fa-solid fa-book-open-reader"></i><span>Estudiar</span>
+                </li>
+            </ul>
+        </section>
+        <section class="formacion container bg-blue-sky">
+            <h2 class="formacion__title titulo2">Formación Academica</h2>
+            <ul class="formacion__list">
+                <li class="formacion__list-item">
+                    <img src="assets/img/unasam.jpg" alt="" class="formacion__list-imagen">
+                    <h3 class="formacion__list-title titulo3">Ingeniería de Sistemas</h3>
+                    <p class="formacion__list-texto parrafo">2017-2022 - UNASAM</p>
+                </li>
+                <li class="formacion__list-item">
+                    <img src="assets/img/inspiring-google.jpg" alt="" class="formacion__list-imagen">
+                    <h3 class="formacion__list-title titulo3">Inspiring Study Conference</h3>
+                    <p class="formacion__list-texto parrafo">2019 - Google</p>
+                </li>
+                <li class="formacion__list-item">
+                    <img src="assets/img/cid unasam.png" alt="" class="formacion__list-imagen">
+                    <h3 class="formacion__list-title titulo3">Inglés básico A2</h3>
+                    <p class="formacion__list-texto parrafo">2021 - CID UNASAM</p>
+                </li>
+                <li class="formacion__list-item">
+                    <img src="assets/img/alura.png" alt="" class="formacion__list-imagen">
+                    <h3 class="formacion__list-title titulo3">Formación en Front End</h3>
+                    <p class="formacion__list-texto parrafo">En curso - Alura</p>
+                </li>
+            </ul>
+        </section>
+        <section class="exp container bg-gray">
+            <h2 class="exp__title titulo2">Experiencia Profesional</h2>
+            <ul class="exp__list">
+                <li class="exp__list-item">
+                    <img src="assets/img/proyect_encript.png" alt="" class="exp__list-imagen">
+                    <div class="exp__list-desc">
+                        <h3 class="titulo3">Encriptador de Texto</h3>
+                        <p class="parrafo">Challenge Alura
+                            Codificador</p>
+                        <div class="exp__list-btns">
+                            <a href="https://github.com/Joe0919/Encriptador-de-texto" class="exp__list-repo btn1"
+                                target="_blank">Repositorio</a>
+                            <a href="https://joe0919.github.io/Encriptador-de-texto/" class="exp__list-demo btn2"
+                                target="_blank">Ver Demo</a>
+                        </div>
+                    </div>
+                </li>
+                <li class="exp__list-item">
+                    <img src="assets/img/proyect_encript.png" alt="" class="exp__list-imagen">
+                    <div class="exp__list-desc">
+                        <h3 class="titulo3">Encriptador de Texto</h3>
+                        <p class="parrafo">Challenge Alura
+                            Codificador</p>
+                        <div class="exp__list-btns">
+                            <a href="" class="exp__list-repo btn1">Repositorio</a>
+                            <a href="" class="exp__list-demo btn2">Ver Demo</a>
+                        </div>
+                    </div>
+                </li>
+                <li class="exp__list-item">
+                    <img src="assets/img/proyect_encript.png" alt="" class="exp__list-imagen">
+                    <div class="exp__list-desc">
+                        <h3 class="titulo3">Encriptador de Texto</h3>
+                        <p class="parrafo">Challenge Alura
+                            Codificador</p>
+                        <div class="exp__list-btns">
+                            <a href="" class="exp__list-repo btn1">Repositorio</a>
+                            <a href="" class="exp__list-demo btn2">Ver Demo</a>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </section>
+        <section class="contacto container bg-blue-sky">
+            <div class="contacto__div">
+                <img src="assets/img/phone.png" alt="" class="contacto__imagen">
+                <div>
+                    <h2 class="contacto__title titulo2">Contacto</h2>
+                    <p class="parrafo">¿Quieres contactarme? <br>
+                        Complete el siguiente formulario y me pondré en contacto con usted lo antes posible.
+                    </p>
+                    <form class="contacto__form">
+                        <div class="group">
+                            <input class="contacto__form-input" type="text" required>
+                            <span class="highlight"></span>
+                            <span class="bar"></span>
+                            <label class="contacto__form-label">Name</label>
+                        </div>
+                        <div class="group">
+                            <input class="contacto__form-input" type="text" required>
+                            <span class="highlight"></span>
+                            <span class="bar"></span>
+                            <label class="contacto__form-label">Email</label>
+                        </div>
+                        <div class="group">
+                            <input class="contacto__form-input" type="text" required>
+                            <span class="highlight"></span>
+                            <span class="bar"></span>
+                            <label class="contacto__form-label">Asunto</label>
+                        </div>
+                        <div class="group">
+                            <textarea class="contacto__form-input" required cols="40" rows="5"
+                                style="resize: both;"></textarea>
+                            <span class="highlight"></span>
+                            <span class="bar"></span>
+                            <label class="contacto__form-label">Mensaje</label>
+                        </div>
+                        <div class="group">
+                            <input class="contacto__form-btn btn2" type="button" disabled value="Enviar Mensaje">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer container">
+        <p>© Desarrollado por Joel Llallihuaman</p>
+        <span>2023</span>
+    </footer>
+    <script src="assets/js/toggle.js"></script>
+</body>
+
+</html>
