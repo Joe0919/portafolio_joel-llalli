@@ -56,7 +56,7 @@
                 <li class="nav-list-item">
                     <label class="label" id="theme-switch">
                         <span class="toggle" id="toggle">
-                            <input class="toggle-input" type="checkbox" id="checkbox_theme"/>
+                            <input class="toggle-input" type="checkbox" id="checkbox_theme" />
                             <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="32" height="32"
                                 viewBox="0 0 32 32" id="moon" class="icon">
                                 <title>moon-fill</title>
@@ -73,12 +73,12 @@
                                 </path>
                             </svg>
 
-                            <span class="toggle__btn" id="toggle__btn"/>
+                            <span class="toggle__btn" id="toggle__btn" />
                         </span>
                     </label>
                 </li>
             </ul>
-        
+
         </nav>
     </header>
     <main>
@@ -177,7 +177,8 @@
             <h2 class="exp__title titulo2">Experiencia Profesional</h2>
             <ul class="exp__list">
                 <li class="exp__list-item">
-                    <img src="assets/img/proyect_encript.png" alt="Foto de Proyecto Encriptador" class="exp__list-imagen">
+                    <img src="assets/img/proyect_encript.png" alt="Foto de Proyecto Encriptador"
+                        class="exp__list-imagen">
                     <div class="exp__list-desc">
                         <h3 class="titulo3">Encriptador de Texto</h3>
                         <p class="parrafo">Challenge Alura
@@ -191,7 +192,8 @@
                     </div>
                 </li>
                 <li class="exp__list-item">
-                    <img src="assets/img/proyect-sistemaHospitalario.png" alt="Foto de Proyecto Atención Hospitalaria" class="exp__list-imagen">
+                    <img src="assets/img/proyect-sistemaHospitalario.png" alt="Foto de Proyecto Atención Hospitalaria"
+                        class="exp__list-imagen">
                     <div class="exp__list-desc">
                         <h3 class="titulo3">Sistema de Atención Hospitalaria</h3>
                         <p class="parrafo">Proyecto de Prácticas Profesional en un Hospital</p>
@@ -202,7 +204,8 @@
                     </div>
                 </li>
                 <li class="exp__list-item">
-                    <img src="assets/img/proyect-MesaPartes.png" alt="Foto de Proyecto Mesa de Partes" class="exp__list-imagen">
+                    <img src="assets/img/proyect-MesaPartes.png" alt="Foto de Proyecto Mesa de Partes"
+                        class="exp__list-imagen">
                     <div class="exp__list-desc">
                         <h3 class="titulo3">Encriptador de Texto</h3>
                         <p class="parrafo">Challenge Alura
@@ -223,34 +226,37 @@
                     <p class="parrafo">¿Quieres contactarme? <br>
                         Complete el siguiente formulario y me pondré en contacto con usted lo antes posible.
                     </p>
-                    <form class="contacto__form">
+                    <form class="contacto__form" action="https://formsubmit.co/joel09llalli@gmail.com" name="contacto__form" method="post">
                         <div class="group">
-                            <input class="contacto__form-input" type="text" required>
+                            <input class="contacto__form-input" name="name" id="name" type="text" required>
                             <span class="highlight"></span>
                             <span class="bar"></span>
                             <label class="contacto__form-label">Name</label>
                         </div>
                         <div class="group">
-                            <input class="contacto__form-input" type="text" required>
+                            <input class="contacto__form-input" name="email" id="email" type="email" required
+                                pattern="^[^@]+@[^@]+\.[a-zA-Z]{2,4}$"
+                                title="Ingrese un email valido ej. user@gmail.com" />
                             <span class="highlight"></span>
                             <span class="bar"></span>
                             <label class="contacto__form-label">Email</label>
                         </div>
                         <div class="group">
-                            <input class="contacto__form-input" type="text" required>
+                            <input class="contacto__form-input" name="asunto" id="asunto" type="text" required minlength="5">
                             <span class="highlight"></span>
                             <span class="bar"></span>
                             <label class="contacto__form-label">Asunto</label>
                         </div>
                         <div class="group">
-                            <textarea class="contacto__form-input" required cols="40" rows="5"
-                                style="resize: both;"></textarea>
+                            <textarea class="contacto__form-input" required cols="40" rows="5" name="mensaje" id="mensaje"
+                                minlength="10"></textarea>
                             <span class="highlight"></span>
                             <span class="bar"></span>
                             <label class="contacto__form-label">Mensaje</label>
                         </div>
                         <div class="group">
-                            <input class="contacto__form-btn btn2" type="button" disabled value="Enviar Mensaje">
+                            <button class="contacto__form-btn btn2" type="submit" value="Enviar Mensaje">Enviar
+                                Mensaje</a>
                         </div>
                     </form>
                 </div>
@@ -261,6 +267,8 @@
         <p>© Desarrollado por Joel Llallihuaman</p>
         <span>2023</span>
     </footer>
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"
+        integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
     <script src="assets/js/toggle.js"></script>
 </body>
 
