@@ -8,11 +8,12 @@
     <link rel="shortcut icon" href="assets/img/logo1.png">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
     <script src="https://kit.fontawesome.com/6b07c2fbaa.js" crossorigin="anonymous"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/normalize.css">
-    <link rel="stylesheet" href="assets/css/example.css">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/toggle.css">
     <script>
+        
         function detectColorScheme() {
             var theme = "light";    //default to light
 
@@ -39,21 +40,21 @@
 </head>
 
 <body>
-    <header class="header">
+    <header class="header" data-aos="fade-down">
         <img src="assets/img/logo1.png" alt="" class="header__logo" id="header__logo">
         <nav class="header__nav">
             <ul class="header__nav-list">
-                <li class="nav-list-item hidden"><a href="" class="nav-list-link">Sobre mi</a></li>
-                <li class="nav-list-item hidden"><a href="" class="nav-list-link">Skills</a></li>
-                <li class="nav-list-item hidden"><a href="" class="nav-list-link">Hobbies</a></li>
-                <li class="nav-list-item hidden"><a href="" class="nav-list-link">Formación</a></li>
-                <li class="nav-list-item hidden"><a href="" class="nav-list-link">Proyectos</a></li>
+                <li class="nav-list-item hidden"><a href="#sobre-mi" class="nav-list-link">Sobre mi</a></li>
+                <li class="nav-list-item hidden"><a href="#skills" class="nav-list-link">Skills</a></li>
+                <li class="nav-list-item hidden"><a href="#hobbies" class="nav-list-link">Hobbies</a></li>
+                <li class="nav-list-item hidden"><a href="#formacion" class="nav-list-link">Formación</a></li>
+                <li class="nav-list-item hidden"><a href="#experiencia" class="nav-list-link">Proyectos</a></li>
                 <li class="nav-list-item">
-                    <a href="mailto:joelllalligiraldo@gmail.com" class="nav-list-link active mail"><i
-                            class="fa-solid fa-envelope"></i><span>joelllalligiraldo@gmail.com</span>
+                    <a href="#contacto" class="nav-list-link active mail" title="Contáctame"><i
+                            class="fa-solid fa-envelope"></i><span>joel09llalli@gmail.com</span>
                     </a>
                 </li>
-                <li class="nav-list-item">
+                <li class="nav-list-item" title="Cambiar Tema">
                     <label class="label" id="theme-switch">
                         <span class="toggle" id="toggle">
                             <input class="toggle-input" type="checkbox" id="checkbox_theme" />
@@ -82,7 +83,7 @@
         </nav>
     </header>
     <main>
-        <section class="banner container">
+        <section class="banner container" id="sobre-mi" data-aos="fade-right">
             <div class="banner__desc">
                 <h1 class="banner__titulo">Hola, mi nombre es <b>Joel Llallihuaman Giraldo</b> y soy Desarrollador de
                     Sistemas Web.</h1>
@@ -105,7 +106,7 @@
             </div>
             <img src="assets/img/perfil.jpg" alt="" class="banner__foto">
         </section>
-        <section class="sobre container bg-blue-sky">
+        <section class="sobre container bg-blue-sky"  data-aos="fade-right">
             <h1 class="sobre__titulo">Sobre mi</h1>
             <p class="sobre_texto1">Soy Desarrollador Web y estudié la carrera de Ingeniería de Sistemas e Informática
                 en la <b>Universidad Nacional Santigo Antúnez de Mayolo (UNASAM)</b> de la provincia de Huaraz,
@@ -119,7 +120,7 @@
                 de Sistemas. </p>
             <span class="sobre__firma">Joel Llallihuaman</span>
         </section>
-        <section class="skills container bg-gray">
+        <section class="skills container bg-gray" id="skills" data-aos="fade-right">
             <h2 class="skills__title titulo2">Skills</h2>
             <ul class="skills__list">
                 <li class="skills__list-item caja"><i class="fa-brands fa-html5"></i><span>Html 5</span></li>
@@ -134,7 +135,7 @@
                 <li class="skills__list-item caja"><i class="fa-brands fa-laravel"></i><span>Laravel</span></li>
             </ul>
         </section>
-        <section class="hobbies container bg-gray">
+        <section class="hobbies container bg-gray" id="hobbies" data-aos="fade-right">
             <h2 class="hobbies__title titulo2">Hobbies</h2>
             <ul class="hobbies__list">
                 <li class="hobbies__list-item caja"><i class="fa-solid fa-headphones"></i><span>Oir Música</span></li>
@@ -148,7 +149,7 @@
                 </li>
             </ul>
         </section>
-        <section class="formacion container bg-blue-sky">
+        <section class="formacion container bg-blue-sky" id="formacion" data-aos="fade-right">
             <h2 class="formacion__title titulo2">Formación Academica</h2>
             <ul class="formacion__list">
                 <li class="formacion__list-item">
@@ -173,7 +174,7 @@
                 </li>
             </ul>
         </section>
-        <section class="exp container bg-gray">
+        <section class="exp container bg-gray" id="experiencia" data-aos="fade-right">
             <h2 class="exp__title titulo2">Experiencia Profesional</h2>
             <ul class="exp__list">
                 <li class="exp__list-item">
@@ -198,7 +199,8 @@
                         <h3 class="titulo3">Sistema de Atención Hospitalaria</h3>
                         <p class="parrafo">Proyecto de Prácticas Profesional en un Hospital</p>
                         <div class="exp__list-btns">
-                            <a href="https://github.com/Joe0919/Sistema_atencion-hospital" target="_blank" class="exp__list-repo btn1">Repositorio</a>
+                            <a href="https://github.com/Joe0919/Sistema_atencion-hospital" target="_blank"
+                                class="exp__list-repo btn1">Repositorio</a>
                             <a href="" class="exp__list-demo btn2">Ver Demo</a>
                         </div>
                     </div>
@@ -211,14 +213,15 @@
                         <p class="parrafo">Challenge Alura
                             Codificador</p>
                         <div class="exp__list-btns">
-                            <a href="https://github.com/Joe0919/Mesa-de-Partes" target="_blank" class="exp__list-repo btn1">Repositorio</a>
+                            <a href="https://github.com/Joe0919/Mesa-de-Partes" target="_blank"
+                                class="exp__list-repo btn1">Repositorio</a>
                             <a href="#" class="exp__list-demo btn2">Ver Demo</a>
                         </div>
                     </div>
                 </li>
             </ul>
         </section>
-        <section class="contacto container bg-blue-sky">
+        <section class="contacto container bg-blue-sky" id="contacto" data-aos="fade-right">
             <div class="contacto__div">
                 <img src="assets/img/phone.png" alt="" class="contacto__imagen">
                 <div>
@@ -226,9 +229,11 @@
                     <p class="parrafo">¿Quieres contactarme? <br>
                         Complete el siguiente formulario y me pondré en contacto con usted lo antes posible.
                     </p>
-                    <form class="contacto__form" action="https://formsubmit.co/joel09llalli@gmail.com" name="contacto__form" method="post">
+                    <form class="contacto__form" action="https://formsubmit.co/joel09llalli@gmail.com"
+                        name="contacto__form" method="post">
                         <div class="group">
-                            <input class="contacto__form-input" name="name" id="name" type="text" required  autocomplete="off" >
+                            <input class="contacto__form-input" name="name" id="name" type="text" required
+                                autocomplete="off">
                             <span class="highlight"></span>
                             <span class="bar"></span>
                             <label class="contacto__form-label">Nombre Completo (*)</label>
@@ -236,26 +241,28 @@
                         <div class="group">
                             <input class="contacto__form-input" name="email" id="email" type="email" required
                                 pattern="^[^@]+@[^@]+\.[a-zA-Z]{2,4}$"
-                                title="Ingrese un email valido ej. user@gmail.com"  autocomplete="off">
+                                title="Ingrese un email valido ej. user@gmail.com" autocomplete="off">
                             <span class="highlight"></span>
                             <span class="bar"></span>
                             <label class="contacto__form-label">Email (*)</label>
                         </div>
                         <div class="group">
-                            <input class="contacto__form-input" name="asunto" id="asunto" type="text" required minlength="5" autocomplete="off" >
+                            <input class="contacto__form-input" name="asunto" id="asunto" type="text" required
+                                minlength="5" autocomplete="off">
                             <span class="highlight"></span>
                             <span class="bar"></span>
                             <label class="contacto__form-label">Asunto (*)</label>
                         </div>
                         <div class="group">
-                            <textarea class="contacto__form-input" required cols="40" rows="5" name="mensaje" id="mensaje"
-                                minlength="10" autocomplete="off" ></textarea>
+                            <textarea class="contacto__form-input" required cols="40" rows="5" name="mensaje"
+                                id="mensaje" minlength="10" autocomplete="off"></textarea>
                             <span class="highlight"></span>
                             <span class="bar"></span>
                             <label class="contacto__form-label">Mensaje (*)</label>
                         </div>
                         <div class="group">
-                            <button class="contacto__form-btn btn2" id="boton-form" type="submit">Enviar
+                            <button class="contacto__form-btn btn2" id="boton-form" type="submit"
+                                title="Enviar Mensaje y recargar">Enviar
                                 Mensaje</a>
                         </div>
                         <input type="hidden" name="_next" value="https://joe0919.github.io/portafolio_joel-llalli/">
@@ -270,9 +277,17 @@
         <p>© Desarrollado por Joel Llallihuaman Giraldo</p>
         <span>2023</span>
     </footer>
-    <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"
+        integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="assets/js/toggle.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            once: false
+        });
+      </script>
 </body>
 
 </html>

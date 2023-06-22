@@ -69,7 +69,9 @@
   --btn-color1: #19b294;
   --btn-color2: #0f6cb7;
 }
-
+html{
+  scroll-behavior: smooth;
+}
 body {
   font-family: "Open Sans", Arial, Helvetica, sans-serif;
   color: #000;
@@ -81,6 +83,7 @@ body {
 
 .container {
   padding: 2rem 10rem;
+  scroll-margin-top: 100px;
 }
 
 .bg-blue-sky {
