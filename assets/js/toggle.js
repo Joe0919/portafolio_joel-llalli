@@ -5,13 +5,11 @@ $(window, document, undefined).ready(function () {
     else $this.removeClass("used");
   });
 });
-(() => {
-  // document.querySelector(".toggle input").addEventListener("change", (e) => {
-  //   document.body.classList.toggle("dark");
-  // });
+
 
   //identify the toggle switch HTML element
   const toggleSwitch = document.querySelector("#checkbox_theme");
+
 
   //function that changes the theme, and sets a localStorage variable to track the theme between page loads
   const switchTheme = (e) => {
@@ -32,14 +30,26 @@ $(window, document, undefined).ready(function () {
     }
   };
 
+  const enviarMensaje = (e) =>{
+    
+    Swal.fire(
+        '¡Hecho!',
+        'El mensaje fue enviado',
+        'success'
+      )
+  };
+
   //listener for changing themes
   toggleSwitch.addEventListener("change", switchTheme, false);
+
+  // const boton = document.querySelector("#boton-form");
+  // boton.addEventListener("click", enviarMensaje);
 
   //pre-check the dark-theme checkbox if dark-theme is set
   if (document.documentElement.getAttribute("data-theme") == "dark") {
     toggleSwitch.checked = true;
     document.getElementById("toggle").classList.add("dark");
     document.getElementById("toggle__btn").classList.add("dark");
-    document.getElementById("img1").src = "assets/img/logo2.png";
+    // document.getElementById("img1").src = "assets/img/logo2.png";
   }
-})();
+

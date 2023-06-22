@@ -198,7 +198,7 @@
                         <h3 class="titulo3">Sistema de Atención Hospitalaria</h3>
                         <p class="parrafo">Proyecto de Prácticas Profesional en un Hospital</p>
                         <div class="exp__list-btns">
-                            <a href="" class="exp__list-repo btn1">Repositorio</a>
+                            <a href="https://github.com/Joe0919/Sistema_atencion-hospital" target="_blank" class="exp__list-repo btn1">Repositorio</a>
                             <a href="" class="exp__list-demo btn2">Ver Demo</a>
                         </div>
                     </div>
@@ -207,12 +207,12 @@
                     <img src="assets/img/proyect-MesaPartes.png" alt="Foto de Proyecto Mesa de Partes"
                         class="exp__list-imagen">
                     <div class="exp__list-desc">
-                        <h3 class="titulo3">Encriptador de Texto</h3>
+                        <h3 class="titulo3">Sistema de Mesa de Partes Virtual</h3>
                         <p class="parrafo">Challenge Alura
                             Codificador</p>
                         <div class="exp__list-btns">
-                            <a href="" class="exp__list-repo btn1">Repositorio</a>
-                            <a href="" class="exp__list-demo btn2">Ver Demo</a>
+                            <a href="https://github.com/Joe0919/Mesa-de-Partes" target="_blank" class="exp__list-repo btn1">Repositorio</a>
+                            <a href="#" class="exp__list-demo btn2">Ver Demo</a>
                         </div>
                     </div>
                 </li>
@@ -228,47 +228,50 @@
                     </p>
                     <form class="contacto__form" action="https://formsubmit.co/joel09llalli@gmail.com" name="contacto__form" method="post">
                         <div class="group">
-                            <input class="contacto__form-input" name="name" id="name" type="text" required>
+                            <input class="contacto__form-input" name="name" id="name" type="text" required  autocomplete="off" >
                             <span class="highlight"></span>
                             <span class="bar"></span>
-                            <label class="contacto__form-label">Name</label>
+                            <label class="contacto__form-label">Nombre Completo (*)</label>
                         </div>
                         <div class="group">
                             <input class="contacto__form-input" name="email" id="email" type="email" required
                                 pattern="^[^@]+@[^@]+\.[a-zA-Z]{2,4}$"
-                                title="Ingrese un email valido ej. user@gmail.com" />
+                                title="Ingrese un email valido ej. user@gmail.com"  autocomplete="off">
                             <span class="highlight"></span>
                             <span class="bar"></span>
-                            <label class="contacto__form-label">Email</label>
+                            <label class="contacto__form-label">Email (*)</label>
                         </div>
                         <div class="group">
-                            <input class="contacto__form-input" name="asunto" id="asunto" type="text" required minlength="5">
+                            <input class="contacto__form-input" name="asunto" id="asunto" type="text" required minlength="5" autocomplete="off" >
                             <span class="highlight"></span>
                             <span class="bar"></span>
-                            <label class="contacto__form-label">Asunto</label>
+                            <label class="contacto__form-label">Asunto (*)</label>
                         </div>
                         <div class="group">
                             <textarea class="contacto__form-input" required cols="40" rows="5" name="mensaje" id="mensaje"
-                                minlength="10"></textarea>
+                                minlength="10" autocomplete="off" ></textarea>
                             <span class="highlight"></span>
                             <span class="bar"></span>
-                            <label class="contacto__form-label">Mensaje</label>
+                            <label class="contacto__form-label">Mensaje (*)</label>
                         </div>
                         <div class="group">
-                            <button class="contacto__form-btn btn2" type="submit" value="Enviar Mensaje">Enviar
+                            <button class="contacto__form-btn btn2" id="boton-form" type="submit">Enviar
                                 Mensaje</a>
                         </div>
+                        <input type="hidden" name="_next" value="https://joe0919.github.io/portafolio_joel-llalli/">
+                        <input type="hidden" name="_captcha" value="false">
+                        <input type="hidden" name="_template" value="table">
                     </form>
                 </div>
             </div>
         </section>
     </main>
     <footer class="footer container">
-        <p>© Desarrollado por Joel Llallihuaman</p>
+        <p>© Desarrollado por Joel Llallihuaman Giraldo</p>
         <span>2023</span>
     </footer>
-    <script src="https://code.jquery.com/jquery-3.7.0.min.js"
-        integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="assets/js/toggle.js"></script>
 </body>
 
