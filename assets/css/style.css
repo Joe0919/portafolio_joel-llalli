@@ -466,6 +466,7 @@ body {
   margin-bottom: 40px;
 }
 .contacto__form-input {
+    box-sizing: border-box;
   font-size: 18px;
   padding: 10px 10px 10px 5px;
   display: block;
