@@ -614,6 +614,16 @@ body {
 
 } */
 /* Escritorio grande */
+@media only screen and (min-width: 1575px) {
+  .container {
+    padding: 2rem 22rem;
+  }
+  .header {
+    justify-content: space-between;
+    padding: 0 22rem;
+  }
+}
+
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
   .container {
     padding: 2rem 2.5rem;
