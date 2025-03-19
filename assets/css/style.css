@@ -1056,3 +1056,7 @@ body {
     margin: 0.5rem;
   }
 }
+#year{
+  font-size: 1.3rem;
+  font-weight: 600;
+}
